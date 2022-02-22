@@ -1,13 +1,18 @@
 import React from "react";
 import Todos from "./components/Todos";
+import Todo from "./model/todo";
 
 function App() {
-
-  return (
-    <div>
-      <Todos items={['Learn React', 'and something']} />
-    </div>
-  );
+    const todos = [
+        new Todo('Learn React'),
+        new Todo( 'Learn Typescript')
+    ]
+    return (
+        <div>
+            <Todos items={todos} />
+        </div>
+    );
 }
+
 
 export default App;
